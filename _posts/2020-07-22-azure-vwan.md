@@ -12,29 +12,46 @@ comments: true
 ## What is Azure Virtual WAN?
 
 Azure Virtual WAN is a networking service that provides optimized and automated connectivity through and towards Azure.
+* Connect any number of branches with multiple connections
+* Auto provisioning from branch office to Azure
+* Automated configuration download and connection enablement
+* Built for throughput and scalability
+* Unified monitoring and management CPE branch devices managed by a growing ecosystem of SD-WAN and VPN partners
 
-Overall Secure Score is an accumulation of all your recommendation scores and is visible on the overview page of Security Center.
+![Crepe](../assets/img/vwan/maxresdefault.jpg){: .mx-auto.d-block :}
 
-![Crepe](../assets/img/asc/image.png){: .mx-auto.d-block :}
-Recommendations can be categorized and sorted by criticality. You will also see the % of Secure Score you will gain if the recommendations are remediated.
+## Virtual WAN Resources
+**VirtualWAN:** The virtualWAN resource represents a virtual overlay of your Azure network and is a collection of multiple resources. It contains links to all your virtual hubs that you would like to have within the virtual WAN. Virtual WAN resources are isolated from each other and cannot contain a common hub. Virtual Hubs across Virtual WAN do not communicate with each other. The ‘Allow branch to branch traffic’ property enables traffic between VPN & ExpressRoute sites as well as VPN to ExpressRoute enabled Sites.
 
-## Default ASC Policy
-Security Center fetches the compliancy rating of a resource by using Azure Policy. By default when you enable Security Center a policy with name: ASC Default will be created.
-![Crepe](../assets/img/asc/image-1.png){: .mx-auto.d-block :}
-When you click on ‘View effective policy’ you can see all of the security policies that are assessed and displayed in Security Center.
-![Crepe](../assets/img/asc/image-2.png){: .mx-auto.d-block :}
-The interesting part is the Effects on the right side.
+**Site**: The site resource known as vpnsite represents your on-premises VPN device and its settings. By working with a Virtual WAN partner, you have a built-in solution to automatically export this information to Azure.
 
-Some policies have a ‘AuditIfNotExists‘ effect, others just have the ‘Audit‘ effect. As these are a baseline set of policies, not all of them apply to your Azure Environment. That is why we can disable policies individually in the ASC Default policy assignment.
-For instance in this environment we are not using an Azure Firewall to route internet Traffic.
+**Hub:** A virtual hub is a Microsoft-managed virtual network. The hub contains various service endpoints to enable connectivity from your on-premises network (vpnsite). The hub is the core of your network in a region. There can only be one hub per Azure region. When you create a hub using Azure portal, it creates a virtual hub VNet and a virtual hub vpngateway.
 
-We can set the policy effect of policy: ‘All internet traffic should be routed via your deployed Azure Firewall’ to ‘Disabled‘. This will remove the recommendation from Security Center and the recommendation won’t affect your Secure Score. It may take some time to reflect in Security Center, as policies are not evaluated continuously.
-![Crepe](../assets/img/asc/image-3.png){: .mx-auto.d-block :}
-Other policies like the usage of Just In Time or NSG’s can also be disabled if you are not using them.
+*A hub gateway is not the same as a virtual network gateway that you use for ExpressRoute and VPN Gateway. For example, when using Virtual WAN, you don’t create a Site-to-Site connection from your on-premises site directly to your VNet. Instead, you create a Site-to-Site connection to the hub. The traffic always goes through the hub gateway. This means that your VNets do not need their own virtual network gateway. Virtual WAN lets your VNets take advantage of scaling easily through the virtual hub and the virtual hub gateway.*
 
-If you apply this principle to all of the policies, and make sure only the ones that are relevant to the environment are enabled, you will have a Secure Score that reflects reality.
+**Hub virtual network connection:** The Hub virtual network connection resource is used to connect the hub seamlessly to your virtual network. At this time, you can only connect to virtual networks that are within the same hub region.
 
-## Custom Policies & Initiatives
-In addition to the default ASC policy that is assigned on creation or enablement of Azure Security Center, you can integrate your custom policy assignment.
-![Crepe](../assets/img/asc/image-5-1024x160.png){: .mx-auto.d-block :}
-This can be interesting if you have business-specific governance related policies:
+**Hub route table:** You can create a virtual hub route and apply the route to the virtual hub route table. You can apply multiple routes to the virtual hub route table. (This is going to be replaced soon)
+
+## Global Connectivity
+
+![Crepe](../assets/img/vwan/image-8.png){: .mx-auto.d-block :}
+
+**Azure Firewall (or other NVA):** Takes care of the Inter-spoke traffic and routing. Provides cross premises traffic shaping and handles the traffic to PaaS Services.
+
+**3rd Party Solution (User WAN):** Takes care of the traffic towards SaaS and provides an user-aware layer (CASB principles).
+
+**3rd Party Solution (on-prem):** Takes care of the traffic towards Azure / Saas and provides branch connectivity.
+
+## Brownfield Migration methodology
+High level overview
+1. Deployment of the Virtual WAN resource
+2. Deployment of (secure) vHubs for each nominated Azure Region
+3. Validation of vHub to vHub connections
+4. Remote site integration (3rd party solution)
+5. Validation of remote sites connections
+6. Demote Hub to Shared services spoke
+7. Cutover to the Virtual WAN environment
+
+
+![Crepe](../assets/img/vwan/image-9.png){: .mx-auto.d-block :}
