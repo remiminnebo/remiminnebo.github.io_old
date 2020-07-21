@@ -4,13 +4,12 @@ title: About me
 subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My mission is to design and deliver cost-effective, high-performant cloud environments that address complex business problems by assessing current capabilities and designing future technology architectures. 
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+- I love everything Kubernetes!
 
 What else do you need?
 
 ### my history
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+After starting my IT carreer as a 1st line support engineer, I have evolved to a cloud architect role.
