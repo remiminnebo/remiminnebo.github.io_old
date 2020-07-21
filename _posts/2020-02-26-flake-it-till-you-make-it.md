@@ -14,5 +14,5 @@ Security Center mimics the work of a security analyst, reviewing your security r
 
 Overall Secure Score is an accumulation of all your recommendation scores and is visible on the overview page of Security Center.
 
-![Crepe](/assets/img/asc/image.png){: .mx-auto.d-block :}
+![Crepe](../assets/img/asc/image.png){: .mx-auto.d-block :}
 Recommendations can be categorized and sorted by criticality. You will also see the % of Secure Score you will gain if the recommendations are remediated.
