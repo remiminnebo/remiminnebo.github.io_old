@@ -6,6 +6,7 @@ cover-img: /assets/img/azuremi-asc-681x454.png
 thumbnail-img: /assets/img/azuremi-asc-96x96.png
 share-img: /assets/img/azuremi-asc-681x454.png
 tags: [Azure Security Center, Governance, Security]
+comments: true
 ---
 **Hi and welcome to my guide on optimizing Azure Security Center to reflect your architectural and business decisions.**
 ## What is Security Center?
