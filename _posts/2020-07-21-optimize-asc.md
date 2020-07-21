@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Optimize: Azure Security Center"
-subtitle: A guide on how to optimize Azure Security Center to reflect your architectural and business decisions.
+title: "Optimize: Azure Security Center Policies"
+subtitle: A guide on how to optimize Azure Security Center Policies to reflect your architectural and business decisions.
 cover-img: /assets/img/azuremi-asc-681x454.png
 thumbnail-img: /assets/img/azuremi-asc-96x96.png
 share-img: /assets/img/azuremi-asc-681x454.png
