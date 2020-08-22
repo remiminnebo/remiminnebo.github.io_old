@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "MS Inspire: Cloud migration insights and best practices"
-subtitle: MS Inspire session
+title: "Cloud migration insights and best practices"
+subtitle: Microsoft Inspire session
 cover-img: /assets/img/vwan/azuremi-vwan.png
 thumbnail-img: /assets/img/vwan/azuremi-vwan.png
 share-img: /assets/img/vwan/azuremi-vwan.png
-tags: [Azure Virtual WAN, Networking, SDWAN]
+tags: [Cloud Migration, AMP, Inspire]
 comments: true
 ---
 
