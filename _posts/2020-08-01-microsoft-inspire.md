@@ -2,9 +2,9 @@
 layout: post
 title: "Cloud migration insights and best practices"
 subtitle: Microsoft Inspire session
-cover-img: /assets/img/inspire/inspire.jpg
-thumbnail-img: /assets/img/inspire/arena.jpg
-share-img: /assets/img/inspire/arena.jpg
+cover-img: /assets/img/inspire/Inspire.png
+thumbnail-img: /assets/img/inspire/arena.png
+share-img: /assets/img/inspire/arena.png
 tags: [Cloud Migration, AMP, Inspire]
 comments: true
 ---
