@@ -2,9 +2,9 @@
 layout: post
 title: "Cloud migration insights and best practices"
 subtitle: Microsoft Inspire session
-cover-img: /assets/img/vwan/azuremi-vwan.png
-thumbnail-img: /assets/img/vwan/azuremi-vwan.png
-share-img: /assets/img/vwan/azuremi-vwan.png
+cover-img: /assets/img/inspire/2.jpg
+thumbnail-img: /assets/img/inspire/2.jpg
+share-img: /assets/img/inspire/1.jpg
 tags: [Cloud Migration, AMP, Inspire]
 comments: true
 ---
@@ -15,6 +15,5 @@ We discuss the best practices and caveats during a cloud migration project!
 https://www.microsoft.com/azure/partners/videos/cloud-migration-insights-and-best-practices
 
 
-![Crepe](../assets/img/vwan/maxresdefault.jpg){: .mx-auto.d-block :}
 
 
