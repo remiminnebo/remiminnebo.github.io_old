@@ -1,7 +1,7 @@
 # --- Basic options --- #
 
 # Name of website
-title: Fabrikam Cloud Adventures 
+title: Fabrikam by rjm
 
 # Short description of your site
 description: A virtual proof that I'm awesome
@@ -14,7 +14,7 @@ author: Remi Minnebo
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - DexMach: "https://dexmach.com"
+    - DexMach: "https://www.dexmach.com"
     - OpenHack: "https://openhack.microsoft.com"
     - CNCF: "https://www.cncf.io/certification/cka/"
 
