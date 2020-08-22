@@ -2,17 +2,21 @@
 layout: post
 title: "Cloud migration insights and best practices"
 subtitle: Microsoft Inspire session
-cover-img: /assets/img/inspire/2.jpg
-thumbnail-img: /assets/img/inspire/2.jpg
-share-img: /assets/img/inspire/1.jpg
+cover-img: /assets/img/inspire/inspire.jpg
+thumbnail-img: /assets/img/inspire/arena.jpg
+share-img: /assets/img/inspire/arena.jpg
 tags: [Cloud Migration, AMP, Inspire]
 comments: true
 ---
 
-## MS Inspire: Cloud migration insights and best practices
-This year I had the opportunity to speak in an MS Inspire session together with the Fast Track for Azure teams.
-We discuss the best practices and caveats during a cloud migration project!
-https://www.microsoft.com/azure/partners/videos/cloud-migration-insights-and-best-practices
+## Cloud migration insights and best practices
+This year I had the opportunity to be a speaker on MS Inspire. Together with the Fast Track for Azure team I've talked around best practices, migration drivers, and caveats during a cloud migration project.
+
+![Crepe](../assets/img/inspire/drivers.png){: .mx-auto.d-block :}
+
+The video for the on demand session is now available on the Microsoft Inspire Partner Zone. It has turned out great!!
+
+<https://www.microsoft.com/azure/partners/videos/cloud-migration-insights-and-best-practices>
 
 
 
