@@ -2,9 +2,9 @@
 layout: post
 title: "Auto-remediation of Azure policies with DeployIfNotExists or Modify effect "
 subtitle: Automate remediation task execution
-cover-img: /assets/img/logicapps/header.png
-thumbnail-img: /assets/img/logicapps/header.png
-share-img: /assets/img/logicapps/header.png
+cover-img: /assets/img/logicapps/header.jpg
+thumbnail-img: /assets/img/logicapps/header.jpg
+share-img: /assets/img/logicapps/header.jpg
 tags: [Azure Policy, Logic Apps, Governance]
 comments: true
 ---
