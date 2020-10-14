@@ -74,4 +74,3 @@ As you can see from an
 
 **Insert mandatory McLovin pic**
 ![Crepe](../assets/img/logicapps/ss8.png){: .mx-auto.d-block :}
-
