@@ -62,3 +62,9 @@ The 2 newly added Web Apps are still in non-compliant state.
         ]
         ....
 ``` -->
+
+So let's automate this! 
+In Logic Apps on a specific trigger (This can be on a schedule or triggered from a http request) we run a task for each PolicyDefinitionAction of effect "deployIfNotExists" or "Modify" that is **non-compliant**
+
+![Crepe](../assets/img/logicapps/ss6.png){: .mx-auto.d-block :}
+![Crepe](../assets/img/logicapps/ss7.png){: .mx-auto.d-block :}
