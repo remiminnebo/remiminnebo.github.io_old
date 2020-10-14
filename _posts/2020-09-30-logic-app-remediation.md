@@ -76,9 +76,12 @@ So let's automate this by using a Azure integration service called Logic Apps:
 
 ![Crepe](../assets/img/logicapps/ss6.png){: .mx-auto.d-block :}
 
-In Logic Apps on a specific trigger (This can be on a schedule or triggered from a http request) we run a task for each PolicyDefinitionAction of effect "deployIfNotExists" or "Modify" that is **non-compliant**.
+In Logic Apps on a specific trigger (This can be on a schedule or triggered from a http request), runs a task for each **PolicyDefinitionAction** of effect **"deployIfNotExists"** or **"Modify"** that is **non-compliant**.
 
-For every resource we receive, the logic app will loop and send out a PUT operation on the Azure Management API to initiate a remediation task.
+For every resource in the response, the logic app will loop and send out a PUT operation on the Azure Management API to initiate a remediation task.
+```
+PUT https://management.azure.com/{resourceId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}?api-version=2019-07-01
+```
 
 ![Crepe](../assets/img/logicapps/ss7.png){: .mx-auto.d-block :}
 
@@ -92,6 +95,5 @@ You can trigger this Logic App action on a time interval, let's say 1 hour. Unti
 After the operation has completed, you could pass over the output/body of the HTTP callback to another step in Logic Apps.
 You could send a mail with a template message that takes the http body output variable to notify IT teams of actions taken.
 Automating things is important, but monitoring your automation is even more important!
-You could also initiate a HTTP a trigger from a "Remediate" button in your ITSM or even in a custom website. 
 
 As always, use with care :)
