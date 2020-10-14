@@ -78,7 +78,7 @@ So let's automate this by using a Azure integration service called Logic Apps:
 
 In Logic Apps on a specific trigger (This can be on a schedule or triggered from a http request), runs a task for each **PolicyDefinitionAction** of effect **"deployIfNotExists"** or **"Modify"** that is **non-compliant**.
 
-For every resource in the response, the logic app will loop and send out a PUT operation on the Azure Management API to initiate a remediation task.
+For every resource in the response, the logic app will loop and send out a HTTP PUT operation on the Azure Management Rest API to initiate a remediation task.
 ```
 PUT https://management.azure.com/{resourceId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}?api-version=2019-07-01
 ```
