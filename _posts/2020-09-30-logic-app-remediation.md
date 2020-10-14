@@ -68,3 +68,10 @@ In Logic Apps on a specific trigger (This can be on a schedule or triggered from
 
 ![Crepe](../assets/img/logicapps/ss6.png){: .mx-auto.d-block :}
 ![Crepe](../assets/img/logicapps/ss7.png){: .mx-auto.d-block :}
+
+As you can see from an 
+## Identity Perspective
+
+**Insert mandatory McLovin pic**
+![Crepe](../assets/img/logicapps/ss8.png){: .mx-auto.d-block :}
+
