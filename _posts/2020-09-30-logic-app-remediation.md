@@ -17,7 +17,7 @@ In this post I'm taking you through an automation setup that initiates remediati
 
 Azure Policy is a service in Azure which allows you create polices which enforce and control the properties of a resource. When these policies are used they enforce different rules and effects over your resources, so those resources stay compliant with your IT governance standards.
 
-# What does deployIfNotExists really mean?
+### What does deployIfNotExists really mean?
 
 **DeployIfNotExists** runs about 15 minutes after a Resource Provider has handled a **create** or **update** resource request and has returned a **success** status code. A template deployment occurs if there are no related resources or if the resources defined by ExistenceCondition don't evaluate to **true**.
 
@@ -83,14 +83,15 @@ For every resource we receive, the logic app will loop and send out a PUT operat
 ![Crepe](../assets/img/logicapps/ss7.png){: .mx-auto.d-block :}
 
 As you can see from an 
-## Identity Perspective
+### Identity Perspective
 
 **Insert mandatory McLovin pic**
 ![Crepe](../assets/img/logicapps/ss8.png){: .mx-auto.d-block :}
 
-You can trigger this on a time interval, let's say 1 hour. Until all of your **pre-existing**, or **glitched out** non-compliant resources are remediated.
+You can trigger this Logic App action on a time interval, let's say 1 hour. Until all of your **pre-existing**, or **glitched out** non-compliant resources are remediated.
 After the operation has completed, you could pass over the output/body of the HTTP callback to another step in Logic Apps.
 You could send a mail with a template message that takes the http body output variable to notify IT teams of actions taken.
 Automating things is important, but monitoring your automation is even more important!
+You could also initiate a HTTP a trigger from a "Remediate" button in your ITSM or even in a custom website. 
 
 As always, use with care :)
