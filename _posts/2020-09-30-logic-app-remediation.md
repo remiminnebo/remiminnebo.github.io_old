@@ -92,8 +92,7 @@ As you can see from an
 ![Crepe](../assets/img/logicapps/ss8.png){: .mx-auto.d-block :}
 
 You can trigger this Logic App action on a time interval, let's say 1 hour. Until all of your **pre-existing**, or **glitched out** non-compliant resources are remediated.
-After the operation has completed, you could pass over the output/body of the HTTP callback to another step in Logic Apps.
-You could send a mail with a template message that takes the http body output variable to notify IT teams of actions taken.
+After the operation has completed, you could pass over the output/body of the HTTP response to another step in Logic Apps.
+You could send a mail with a template message that takes the HTTP body output variable to notify IT teams of actions taken.
 Automating things is important, but monitoring your automation is even more important!
 
-As always, use with care :)
