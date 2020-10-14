@@ -26,8 +26,11 @@ So I deployed a custom Azure Policy that configures a Diagnostic setting on all 
 > **az policy remediation -n** *remediateallthethings* **--policy-assignment** *"/subscriptions/subid/providers/Microsoft.Authorization/policyAssignments/yourassignmentid"*
 
 ![](../assets/img/logicapps/ss2.2.png)
+
 This is how it looks like in the Azure portal:
+
 ![Crepe](../assets/img/logicapps/ss1.png){: .mx-auto.d-block :}
+
 Everything is looking good! Let's see what happens over the next few days, if we add some Web Apps.
 
 
@@ -38,6 +41,7 @@ Remember, this policy will only apply a diagnostic setting if it is not already 
 
 
 ![Crepe](../assets/img/logicapps/ss4.png){: .mx-auto.d-block :}
+
 The 2 newly added Web Apps are still in non-compliant state.
 
 <!-- ```json
@@ -63,10 +67,12 @@ The 2 newly added Web Apps are still in non-compliant state.
         ....
 ``` -->
 
-So let's automate this! 
-In Logic Apps on a specific trigger (This can be on a schedule or triggered from a http request) we run a task for each PolicyDefinitionAction of effect "deployIfNotExists" or "Modify" that is **non-compliant**
+So let's automate this by using a Azure integration service called Logic Apps:
 
 ![Crepe](../assets/img/logicapps/ss6.png){: .mx-auto.d-block :}
+
+In Logic Apps on a specific trigger (This can be on a schedule or triggered from a http request) we run a task for each PolicyDefinitionAction of effect "deployIfNotExists" or "Modify" that is **non-compliant**
+
 ![Crepe](../assets/img/logicapps/ss7.png){: .mx-auto.d-block :}
 
 As you can see from an 
