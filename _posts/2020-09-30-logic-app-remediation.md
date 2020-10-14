@@ -8,8 +8,14 @@ share-img: /assets/img/logicapps/header.jpg
 tags: [Azure Policy, Logic Apps, Governance]
 comments: true
 ---
+In this post I'm taking you through an automation setup that initiates remediation tasks for Azure Policy non-compliant resources in Azure.
 
 ![Crepe](../assets/img/logicapps/automatic.png){: .mx-auto.d-block :}
+
+
+# What is Azure policy?
+
+Azure Policy is a service in Azure which allows you create polices which enforce and control the properties of a resource. When these policies are used they enforce different rules and effects over your resources, so those resources stay compliant with your IT governance standards.
 
 # What does deployIfNotExists really mean?
 
