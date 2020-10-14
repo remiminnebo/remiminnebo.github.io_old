@@ -10,7 +10,7 @@ comments: true
 ---
 
 ## Cloud migration insights and best practices
-This year I had the opportunity to be a speaker at the MS Inspire Virtual Event 2020. Together with the Fast Track for Azure team I've talked about best practices, migration drivers, and caveats during a cloud migration project.
+I had the amazing opportunity to be a speaker at the MS Inspire Virtual Event 2020. Together with the Fast Track for Azure team I've talked about best practices, migration drivers, and caveats during a cloud migration project.
 
 ![Crepe](../assets/img/inspire/drivers.png){: .mx-auto.d-block :}
 

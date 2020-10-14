@@ -25,7 +25,7 @@ During an evaluation cycle, policy definitions with a DeployIfNotExists effect t
 
 ## Lets try it out!
 
-So I deployed a custom Azure Policy that configures a Diagnostic setting on all Azure Web Apps. There are 30 Web Apps on the subscription so I had to run a remediation task to get the Azure Policy to apply to the non-compliant resources as these are "Existing" resources.
+I deployed a custom Azure Policy that configures a Diagnostic setting on all Azure Web Apps. There are 30 Web Apps on the subscription so I had to run a remediation task to get the Azure Policy to apply to the non-compliant resources as these are "Existing" resources.
 
 ### To do this via Azure cli:
 
@@ -37,8 +37,7 @@ This is how it looks like in the Azure portal:
 
 ![Crepe](../assets/img/logicapps/ss1.png){: .mx-auto.d-block :}
 
-Everything is looking good! Let's see what happens over the next few days, if we add some Web Apps.
-
+Everything seems good! Let's see what happens over the next few days when we add some **new** Web Apps.
 
 I have created 2x Web Apps about 3 days after the policy was assigned.
 Remember, this policy will only apply a diagnostic setting if it is not already configured. 
@@ -77,7 +76,9 @@ So let's automate this by using a Azure integration service called Logic Apps:
 
 ![Crepe](../assets/img/logicapps/ss6.png){: .mx-auto.d-block :}
 
-In Logic Apps on a specific trigger (This can be on a schedule or triggered from a http request) we run a task for each PolicyDefinitionAction of effect "deployIfNotExists" or "Modify" that is **non-compliant**
+In Logic Apps on a specific trigger (This can be on a schedule or triggered from a http request) we run a task for each PolicyDefinitionAction of effect "deployIfNotExists" or "Modify" that is **non-compliant**.
+
+For every resource we receive, the logic app will loop and send out a PUT operation on the Azure Management API to initiate a remediation task.
 
 ![Crepe](../assets/img/logicapps/ss7.png){: .mx-auto.d-block :}
 
@@ -86,3 +87,10 @@ As you can see from an
 
 **Insert mandatory McLovin pic**
 ![Crepe](../assets/img/logicapps/ss8.png){: .mx-auto.d-block :}
+
+You can trigger this on a time interval, let's say 1 hour. Until all of your **pre-existing**, or **glitched out** non-compliant resources are remediated.
+After the operation has completed, you could pass over the output/body of the HTTP callback to another step in Logic Apps.
+You could send a mail with a template message that takes the http body output variable to notify IT teams of actions taken.
+Automating things is important, but monitoring your automation is even more important!
+
+As always, use with care :)
