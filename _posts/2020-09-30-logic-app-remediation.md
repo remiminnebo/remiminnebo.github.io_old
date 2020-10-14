@@ -11,17 +11,17 @@ comments: true
 
 ![Crepe](../assets/img/logicapps/automatic.png){: .mx-auto.d-block :}
 
-## What does deployIfNotExists really mean?
+# What does deployIfNotExists really mean?
 
 **DeployIfNotExists** runs about 15 minutes after a Resource Provider has handled a **create** or **update** resource request and has returned a **success** status code. A template deployment occurs if there are no related resources or if the resources defined by ExistenceCondition don't evaluate to **true**.
 
 During an evaluation cycle, policy definitions with a DeployIfNotExists effect that match resources are marked as non-compliant, but no action is taken on that resource. Existing non-compliant resources can be remediated with a remediation task.
 
-###Lets try it out!
+##Lets try it out!
 
 So I deployed a custom Azure Policy that configures a Diagnostic setting on all Azure Web Apps. There are 30 Web Apps on the subscription so I had to run a remediation task to get the Azure Policy to apply to the non-compliant resources as these are "Existing" resources.
 
-#####To do this via Azure cli:
+To do this via Azure cli:
 
 >**az policy remediation -n** *remediateallthethings* **--policy-assignment** *"/subscriptions/subid/providers/Microsoft.Authorization/policyAssignments/yourassignmentid"*
 
