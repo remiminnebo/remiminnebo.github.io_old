@@ -39,7 +39,7 @@ This is how it looks like in the Azure portal:
 
 Everything seems good! Let's see what happens over the next few days when we add some **new** Web Apps.
 
-I have created 2x Web Apps about 3 days after the policy was assigned.
+I have created 2 Web Apps about 3 days after the policy was assigned.
 Remember, this policy will only apply a diagnostic setting if it is not already configured. 
 
 ![Crepe](../assets/img/logicapps/ss5.png){: .mx-auto.d-block :}
