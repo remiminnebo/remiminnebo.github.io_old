@@ -8,7 +8,7 @@ share-img: /assets/img/logicapps/header.jpg
 tags: [Azure Policy, Logic Apps, Governance]
 comments: true
 ---
-In this post I'm taking you through an automation setup that initiates remediation tasks for Azure Policy non-compliant resources in Azure.
+In this post I'm taking you through an automation setup that initiates remediation tasks for Azure Policy non-compliant resources in Azure. This is a setup that Jan De Laet and myself created for making our lives easier.
 
 ![Crepe](../assets/img/logicapps/automatic.png){: .mx-auto.d-block :}
 
